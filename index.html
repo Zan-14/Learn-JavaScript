@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Part 1-2</title>
     <!-- internal JS -->
     <!-- <script>
         // alert("try alert internal JS");
@@ -14,22 +14,35 @@
 </head>
 <body>
     <header>
+        <!-- Contents -->
         <div class="container" id="containerHead">
+            <!-- Header text -->
             <div>
-                <h1 class="opening">Hello Guys</h1>
-                <h2 class="note">This is header section</h2>
+                <h2 class="opening">Hello Guys</h2>
+                <h3 class="note">This is header section</h3>
             </div>
+            <!-- test getElementsbyName method-->
+            <form name="form-test">get this with getElementsByName()</form>
+            <!-- list -->
             <div>
                 <ul class="order-list" id="ulList">Content of this page:</ul>
                     <li class="list">Header</li>
                     <li class="list">Body</li>
                     <li class="list">Footer</li>
             </div>
+            <!-- paragraph -->
+            <div>
+                <p class="paragraph-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tempore iste quasi omnis iusto sapiente laudantium, sit quas ipsum cumque aspernatur quis minima. Numquam unde optio molestiae nihil ab? Praesentium!</p>
+            </div>
         </div>
     </header>
-    <section>
+    <section style="display: flex;">
+        <!-- buttons -->
         <div>
-            <button onclick="changeText()">Change H2</button>
+            <!-- example of using second method of manipulating text-->
+            <!-- Check index.js file -->
+            <!-- syntax: onclick="function name()"-->
+            <button onclick="changeText()">Change H3</button>
         </div>
         <div>
             <button id="changeUl">Change ul Text</button>
@@ -38,10 +51,14 @@
             <button id="change_bg">Change Background</button>
         </div>
         <div>
-            <button id="change_styles">Change li Styles</button>
+            <button id="change-styles">Change Many styles</button>
         </div>
-<!-- test commit -->
-<!-- please no errors -->
+        <div>
+            <button id="change_many">Change li Styles</button>
+        </div>
+        <div>
+            <button id="on-off-styles">On and Off H2 text style</button>
+        </div>
     </section>
     
 </body>
