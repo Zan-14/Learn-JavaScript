@@ -1,29 +1,35 @@
+// JS part 3-4
 // Math and String Manipulation
-let nilai = -200;
-let absNilai = Math.abs(nilai);
+let score = -200;
+let absScore = Math.abs(score);
+console.log(absScore);
 
-let pangkat = Math.pow(2, 2);
-let kuadrat = Math.sqrt(80);
+let powerScore = Math.pow(2, 2);
+let rootScore = Math.sqrt(36); // square root of the value
+console.log(rootScore);
 
-let maxAngka = Math.max(100, 1, 2, 3, 4, 5);
-let minAngka = Math.min(100, 1, 2, 3, 4, 5);
+let maxNumber = Math.max(100, 1, 2, 3, 4, 5);
+let minNumber = Math.min(100, 1, 2, 3, 4, 5);
 
-let pembulatanKebawah = Math.floor(9.9);
-let pembulatanKeatas = Math.ceil(9.1);
-let pembulatanPendekatan = Math.round(9.5);
+let roundingDown = Math.floor(9.7);
+let roundingUp = Math.ceil(9.2);
+let autoRounding = Math.round(9.5);
 
-let randomAngka = Math.random();
-let randomAngkaTwenty  = Math.floor(Math.random() * 4)  + 20;
+let randomNumber = Math.random();
+/* Keep in mind that Math.random() generates a random number beetween 0 and 1, so 0 and 1 are not included.
 
-console.log(randomAngkaTwenty);
+The syntax below is to generate random numbers from 20 to under 25 without any decimal point or only integer numbers */
+let randomTwenties  = Math.floor(Math.random() * 5)  + 20;
 
-console.log(Math.floor(Math.random() * 100));
+console.log(randomTwenties);
 
-document.write(nilai);
-console.log(absNilai);
+console.log(Math.floor(Math.random() * 100)); // this will generate a random number from 0 to under 100 in integer.
+
 
 const arrayScore = [100, 1, 3, 4, 5, 6];
-const getMaxScore = Math.max(...arrayScore);
+const getMaxScore = Math.max(...arrayScore); 
+/*You must add 3 dots (...constant) in the method, because the data is array. If you just type the constant, you will get NaN (Not a Number) return.
+*/
 console.log(getMaxScore);
 
 // const mathjs = Math. // explore the others Math.list
@@ -32,41 +38,47 @@ console.log(getMaxScore);
 // String Manipulation
 const nama = "Fauzan" // index> F = 0; a = 1; u = 2; z = 3; a = 4; n = 5;
 console.log(nama.length);
-console.log(nama[2],'memunculkan huruf tertentu dengan no index');
+
+console.log(nama[2], 'Showing a specific letter with the index number');
+
+console.log(nama.indexOf('z'), 'using indexOf to know the index number of a specific letter');
 
 // String Methods
-const name = "Uzan";
+const myName = "Uzan";
 const city = "Blora";
 const age = 20;
 const sex = "male";
 
-const mergeString = name + " " + city;
+const mergeString = myName + " " + city;
 console.log(mergeString);
 
-const merge = `${name} in ${city}`;
+const merge = `${myName} in ${city}`; 
+// recommended method to merge string data
 console.log(merge);
 
-const repeatName = name.repeat(10);
+const repeatName = (myName + ' ').repeat(10);
 console.log(repeatName);
+document.write(repeatName);
 
 const replaceCity = city.replace("Blora", "Jateng");
 console.log(replaceCity);
 // replaceAll > if you want to replace all.
 
-console.log(city.indexOf("l"));
-console.log(name[name.length - 1]);
+console.log(city.indexOf("o"));
+console.log(myName[myName.length - 1]); // to know the last letter of the data;
 console.log(city[city.length - 1]);
 
-console.log(city.indexOf("z"));
+console.log(city.indexOf("z")); // the result will be -1 because there is no z letter in the city name
 
-const isExist = city.indexOf("z") == -1? "Tidak ada huruf" : "Ada huruf";
+const isExist = city.indexOf("z") == -1 ? "Tidak ada huruf" : "Ada huruf";
+//the syntax above is to know whether there is a certain letter (true) or not (false) and give a comment based on the true or false
 console.log(isExist);
 
 // slice
-console.log(city.slice(0,3));
-console.log(city.slice(3,5));
+console.log(city.slice(0,3), "'letter with 0, 1, 2 index will appear'");
+console.log(city.slice(1,4), "'letter with 1, 2, 3 index will appear'");
 // substring
-console.log(city.substring(3,5));
+console.log(city.substring(1,4)); //same with slice
 
 
 // lowercase uppercase
@@ -74,8 +86,10 @@ const cityBig = city.toUpperCase();
 const citySmall = city.toLowerCase();
 console.log(cityBig, citySmall);
 
-// trim
-// to erase useless space
+
+// trim (to erase useless space)
+
+
 
 //split = to make array of strings
 const fruit = "banana,apple,orange,melon";
@@ -156,8 +170,8 @@ console.log(now);
 console.log(now.getMonth() + 1);
 console.log(now.getDay());
 
-const formatIndo = now.toLocaleDateString("id-ID", options);
-console.log(formatIndo); //kenapa error???
+// const formatIndo = now.toLocaleDateString("id-ID", options);
+// console.log(formatIndo); //kenapa error???
 
 // const formatTimeIndo = now.toLocaleString('id-ID', options);
 // console.log(formatTimeIndo);
