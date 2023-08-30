@@ -180,4 +180,118 @@ Actually, innerHTML is one of the object value that we can manipulate inside the
 You can check other values by using console.log(variable) 
 */
 
-// last video JS part 2 : 1:05:00
+/* Type of data */
+
+// String = word value
+let dataString = "Hallo";
+
+// Number = number value
+// 1. Interger (round numbers)
+let myAge = 23;
+// 2. Float (fractional numbers)
+let myHeight = 173.4;
+
+// Boolean = True or False value
+let isAdmin = false; // or let isAdmin = true;
+// convertion to number, true = 1, false = 0
+console.log(Number(isAdmin)); // 0 will appear because the data is false
+
+// Object = various types of data, {} is the object type data
+let myIdentity = {
+    name : "Zan JM",
+    age : 23,
+    address : "Kauman",
+    sex : "Male",
+    "body weight" : 69,
+    "body height" : 173,
+};
+console.log(myIdentity); //check the output
+// I want to take the address data, then:
+console.log(myIdentity.address);
+// I want to take the body weight data, then:
+console.log(myIdentity["body weight"]); //if the object key has more than a word, then use [] without . after variable name
+
+// Array = some data with [] as brackets, Has index to locate each data
+let foods = ["noodle", "pizza", "burger", "hot dog",];
+console.log(foods); //check the output
+// I want to take the 3rd data from the array, then:
+console.log(foods[2]); //index start from 0
+
+// the reason we can take some data from HTML file (from class or id, etc ) using getElement/querySelector is because Document Object Model (DOM), this will make the HTML file or document into object data type, so we can take data from it.
+
+/* 
+Keep in mind that a data can be an object inside an array inside an object... and so on and so on. Or vice versa. Go to part 3-4 to get the details.
+*/
+
+/*OPERATORS in JavaScript*/
+const x = 3;
+const y = 6;
+const z = "6";
+
+const sumResult = x + y; // addition (sum)
+console.log(sumResult);
+const minResult = x - y; // subtraction (minus)
+console.log(minResult);
+const multiResult = x * y // multiplication (multiply)
+console.log(multiResult);
+const divResult = x / y; // division (divide)
+console.log(divResult);
+const moduloResult = x % y; // modulo or modulus, open this to know why the result is 3 = https://visualfractions.com/calculator/modulo/what-is-3-mod-6/
+console.log(moduloResult);
+const powerResult = x ** y; // powers of number
+console.log(powerResult);
+
+/* COMPARISON and LOGICAL OPERATORS in JavaScript*/
+
+// 1. Comparison (result will be true or false)
+let equalTo = x == y; // same value, different data type = true
+console.log(equalTo);
+let equals = y === z; // same value, same data type = true
+let notEqual = y != z; // not same value = true
+let notEquals = y !== z; // not same value or not same data type = true
+// and so on open >> https://www.w3schools.com/js/js_comparisons.asp
+
+// 2. Ternary (conditional) operator
+let isAfternoon = false; // Create a starting condition
+let temperature = isAfternoon ? 'Hot' : 'Cold';
+// condition ? true : false;
+console.log(temperature);
+
+// Change data type
+const number1 = 20;
+const number2 = '22';
+const number3 = '173.4'
+// 1. String to Number (Integer)
+const numberWrongResult = number1 + number2; // we have to change the second parameter
+console.log(numberWrongResult); // the answer is incorrect
+const numberResult = number1 + parseInt(number2); // use parseInt to change to number (integer)
+console.log(numberResult); // the answer is correct
+
+// 2. String to Number (Float)
+console.log (number3); // this is string
+console.log (parseFloat(number3)); // this is float
+
+// 3. Number to String
+console.log (number1); // this is number
+console.log (number1.toString()); // this is string
+
+// Change data format
+// Example: I want to round the float number to maximum 3 numbers behind the decimal point
+const phiNumber = 3.14159265358979;
+console.log (phiNumber); // this will show all the numbers
+console.log (phiNumber.toFixed(3)); // this will show to maximum 3 numbers behind the decimal point and round the number to the nearest point (up(5-9) or down(1-4)). Use toFixed(Max Number)
+
+
+// Show the results of operations in HTML
+const showOperation = document.querySelectorAll('.show-operation');
+
+for (let i = 0; i < showOperation.length; i++) {
+    showOperation[i].innerHTML = phiNumber.toString();
+}; // use loop if you want to show to all the elements with the same class name
+/* or if you just want to show to one element use the
+    showOperation.innerHTML = phiNumber.toString(); 
+without the [i]
+*/
+
+
+// You have completed the 1-2 part of the JavaScript (Session 14-15). Go to next section
