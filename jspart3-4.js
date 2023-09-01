@@ -389,13 +389,13 @@ avgScore.innerHTML = `Average score = <b>${totalScore / dataMahasiswaLengkap.len
 /* 6. how to get letter length from 
 const bahasa "JavaScript"
 Answer : bahasa.length
-Note: without () because is not a function, but property
+Note: without () because it is not a method, but property
 */
 
 /* 8. how to erase spaces at the start and end of 
 const text = "    Ini adalah contoh.    ";
 Answer : text.trim()
-Note: use () because it is a function
+Note: use () because it is a method
 */
 
 /* 9. What is the result of
@@ -409,13 +409,13 @@ const phrase = "Hari ini adalah hari yang cerah";
 how to change "cerah" word to "hujan"?
 
 Answer : phrase.replace("cerah","hujan");
-Note: replace is a function. replace(*before", "after")
+Note: replace is a method. replace(*before", "after")
 */
 
 /* 11. What is the result of
 console.log("JavaScript".charAt(6));
 Answer : r
-Note: .charAt(6) is a function to know the letter based on the index. Remember, index start from 0
+Note: .charAt(6) is a method to know the letter based on the index. Remember, index start from 0
 */
 
 /* 12. If
@@ -423,7 +423,7 @@ const text = "Belajar JavaScript sangat menyenangkan";
 How to split the string into an array?
 Answer : text.split(" ");
 
-Note: .split(" ") is a function. Inside the (), we add a space or comma or other symbol that is in the string to separate between each data. 
+Note: .split(" ") is a method. Inside the (), we add a space or comma or other symbol that is in the string to separate between each data. 
 If we just add "" whithout adding anything, the result will be an array with each letter separated.
 
 Example :
@@ -437,7 +437,7 @@ const email = "user@example.com";
 How to check if the email is ended with ".com"?
 Answer : email.endsWith(".com");
 
-Note: .endsWith(".com") is a function. Inside the (), we add a word that we want to validate. The result will be boolean (true) or (false).
+Note: .endsWith(".com") is a method. Inside the (), we add a word that we want to validate. The result will be boolean (true) or (false).
 There is also .startsWith() , the vice versa of endsWith()
 
 Example:
@@ -528,7 +528,7 @@ Answer : date.getFullYear();
 console.log(new Date().getFullYear());
 or you can declare a variable "date" first with new Date() value
 
-Note: Remember, It is getFullYear , not getYear. And It is a function so don't forget to add ()
+Note: Remember, It is getFullYear , not getYear. And It is a methd so don't forget to add ()
 */
 
 
