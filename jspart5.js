@@ -1,30 +1,35 @@
 // JavaScript Part 5
-console.log('test');
+
+// console.log('test');
 
 // If, switch, functions, Basic OOP, Async Await (optional)
 
 /* CONDITIONAL STATEMENTS 
 
-If statements
+if STATEMENTS
 
 */
+//basic if statements syntax
 const score = 10
 
-if (score == 10) {
-    console.log('sama');
-}else {
-    console.log('tidak sama');
+if (score == 15) {
+    console.log('wrong')
+} else {
+    console.log('right')
 };
 
-// const yourScore = prompt('input your score').toLowerCase;
+// ANOTHER EXAMPLE of if statement (nested if statements)
+// const gradeRanges = prompt('Input your grade "A , B , C , D"').toLocaleUpperCase();
 
-// if (yourScore == 'a' || yourScore == 'b') {
-//     alert('Your score is good');
-// }else if (yourScore == 'c' || yourScore == 'd') {
-//     alert('Your score is not good enough');
+// if (gradeRanges == "A" || gradeRanges == "B") {
+//     alert('Good Job!')
+// } else if (gradeRanges == "C" || gradeRanges == "D") {
+//     alert('Come on! Try harder next time')
 // } else {
-//     alert('type A or B or C or D');addEventListener
+//     alert('Please type A or B or C or D only!')
 // };
+// Note: REMEMBER! toLocaleUpperCase() is a method, so you must type ().
+
 
 /* learn || (or); && (and); != (not same) in conditional statements */
 
