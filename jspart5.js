@@ -59,56 +59,81 @@ score < 60 = E
 // };
 
 
-/* Study Case Login (fail to follow real time, check the video part JS part 5*/ 
-// const user = {
-//     username: 'uzan',
-//     password: '1401',
-// }
-// const dataLocation = 'Jakarta';
+/* Study Case , create Login
+conditions / scenarios:
+1. The Username and Password must be same as the database (variable), True = alert('login success'), False = alert('incorrect username / password')
+2. If the user input "jakarta" in the location, there will be an alert('You are from Jakarta'), else = alert('you are not from Jakarta') */
 
-// const usernameElm = document.getElementById('username');
-// const passwordElm = document.getElementById('password');
-// const locationElm = document.getElementById('location');
-// const btn_loginElm = document.getElementById('btn_login');
+// This is the user account
+const user = {
+    username: 'uzan',
+    password: '1401',
+}
+const dataLocation = 'jakarta';
 
-// btn_loginElm.addEventListener('click', function () {
-//     const username = usernameElm.value;
-//     const password = passwordElm.value;
-//     const location = locationElm.value;
-//     console.log(location)
+//get the element from the html
+const usernameElm = document.getElementById('username');
+const passwordElm = document.getElementById('password');
+const locationElm = document.getElementById('location');
+const btn_loginElm = document.getElementById('btn_login');
 
-//     if (username.length > 0 && password.length > 0) {
+//create an action when pressing the button "Login"
+btn_loginElm.addEventListener('click', function () {
+    // declare variable when user input the data account
+    const username = usernameElm.value
+    const password = passwordElm.value
+    const location = locationElm.value
 
-//         if (username === user.username && password === user.password) {
-//             if(location.toLowerCase() === dataLocation.toLowerCase()) {
-//                 alert('You are from Jakarta')
+    // create the nested if conditions
+    // first condition is the user must input the user and password. they can't left it blank
+    if (username.length > 0 && password.length > 0) {
 
-//             } else {
-//                 alert('You are not from Jakarta')
-//             }
-            
-//                 alert('Login successful')
-            
-//         } else {
-//             alert('Input Username and Password')
+        //second condition is the user input and the database or their registered account data must be same
+        if (username === user.username && password === user.password) {
+
+            //third condition is if the user from jakarta or not. Blanking the location will be considered as false input, so this is optional. If you want to make user input the location and not blanking it, you can add location in the first if condition.
+            if (location.toLowerCase() === dataLocation.toLowerCase()) {
+                alert('You are from jakarta')
+
+            } else {
+                alert('You are not from jakarta')
+            }
+
+            //special to this alert, you can't place this under the second if. Pay attention to the brackets and position of the result.
+            alert('Login successful')
+
+        } else {
+            alert('Invalid username or password')
+        }
+    } else {
+        alert('Input your Username and Password')
+    }
+});
+
+
 
 
 /* Switch Case */
 
-const day = 'Monday';
+//Example:
+const day = 'friday';
+const dayLowCase = day.toLowerCase();
 
-switch (day) {
+switch (dayLowCase) {
     case 'Monday':
-        console.log('You are right, today is monday', '"switch case practice"');
+        console.log('You are right, today is friday', '"switch case practice"');
         break;
     case 'Tuesday':
-        console.log('You are wrong, today is monday', '"switch case practice"');
+        console.log('You are wrong, today is friday', '"switch case practice"');
         break;
     default:
         console.log('You are wrong!', '"switch case practice"');
         break;
 };
-
+/* USE switch case if:
+1. We know the other conditions / options are
+2. If we don't know that, prefer to use if else
+*/
 
 
 
@@ -116,13 +141,19 @@ switch (day) {
 
 /* Counted and Uncounted looping
 1. Counted Looping = We know how many times are the loop
+examples: for and foreach */
+// for loop
+const loopFor = document.getElementById('loop_for');
+// console.log(loopFor);
 
-example: for and  
-*/
+const scoreGrade = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].toString();
+
+for (let i = 0; i < 5; i++) {
+    loopFor.innerHTML += `<p>${i + 1} - ${scoreGrade}</p><br>`;
+};
+
+// console.log(scoreGrade);
 
 /* 2. Uncounted looping = We don't know how many times are the loop
+examples: while and do/while */
 
-example: 
-*/
-
-// I am exhausted, rewatch the video session 18 (JS part 5)
