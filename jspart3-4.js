@@ -302,7 +302,7 @@ const dataMahasiswaLengkap = [
         jurusan: "Informatika",
         alamat: {
             kota: "Jakarta",
-            provinsi: "DKI Jakrta"
+            provinsi: "DKI Jakarta"
         },
         nilaiAkhir: 85,
     },
@@ -360,6 +360,176 @@ Example:
 1. Balmon - Jawa Timur
 */
 
+const mhsInformatika = dataMahasiswaLengkap.filter((data) => data.jurusan == "Informatika");
+// filter the "informatika" data
+const mhsInformatikaElm = document.querySelector('#mhs-informatika-elm');
 
-/* 3. Munculkan pada alert berapa rata rata nilaiAkhir dari data mahasiswa diatas
+mhsInformatika.map((data) => {
+    mhsInformatikaElm.innerHTML += `<li>${data.nama} - ${data.alamat.provinsi}</li>`
+});
+// console.log(mhsInformatika);
+// += is a must here. If you just use = after innerHTML,only one data will show up
+
+
+
+/* 3. Munculkan pada HTML berapa rata rata nilaiAkhir dari data mahasiswa diatas
 */
+
+const avgScore = document.querySelector('#avg-score');
+const totalScore = dataMahasiswaLengkap.reduce((accumulator, data) => {
+    return accumulator + data.nilaiAkhir
+}, 0);
+
+avgScore.innerHTML = `Average score = <b>${totalScore / dataMahasiswaLengkap.length}</b>`;
+
+
+/* QUIZ */
+// Quiz from Session 17 = 1:45:00
+
+/* 6. how to get letter length from 
+const bahasa "JavaScript"
+Answer : bahasa.length
+Note: without () because is not a function, but property
+*/
+
+/* 8. how to erase spaces at the start and end of 
+const text = "    Ini adalah contoh.    ";
+Answer : text.trim()
+Note: use () because it is a function
+*/
+
+/* 9. What is the result of
+console.log("JavaScript".substring(4,7));
+Answer : Scr
+Note: letter with index 4 is included. However, index 7 is NOT included 
+*/
+
+/* 10. if
+const phrase = "Hari ini adalah hari yang cerah";
+how to change "cerah" word to "hujan"?
+
+Answer : phrase.replace("cerah","hujan");
+Note: replace is a function. replace(*before", "after")
+*/
+
+/* 11. What is the result of
+console.log("JavaScript".charAt(6));
+Answer : r
+Note: .charAt(6) is a function to know the letter based on the index. Remember, index start from 0
+*/
+
+/* 12. If
+const text = "Belajar JavaScript sangat menyenangkan";
+How to split the string into an array?
+Answer : text.split(" ");
+
+Note: .split(" ") is a function. Inside the (), we add a space or comma or other symbol that is in the string to separate between each data. 
+If we just add "" whithout adding anything, the result will be an array with each letter separated.
+
+Example :
+const text = "Belajar JavaScript sangat menyenangkan";
+const arrText = text.split(" ");
+console.log(arrText);
+*/
+
+/* 13. If
+const email = "user@example.com";
+How to check if the email is ended with ".com"?
+Answer : email.endsWith(".com");
+
+Note: .endsWith(".com") is a function. Inside the (), we add a word that we want to validate. The result will be boolean (true) or (false).
+There is also .startsWith() , the vice versa of endsWith()
+
+Example:
+const email = "user@example.com";
+const lastEmail = email.endsWith(".com");
+console.log(lastEmail);
+*/
+
+/* 14. If
+const text = "Hari ini adalah hari yang indah";
+How to count the word "hari" appear?
+Answer : text.match("hari").length;
+
+Note: First we use .match("hari") to confirm the word, then we use .length to know how many words are there.
+
+Example:
+const text = "Hari ini adalah hari yang indah";
+const countHari =  text.match("hari").length;
+console.log(countHari);
+Note: the return will be only one. Because .match is case sensitive. It will be different if we use .toLowerCase first in the string.
+*/
+
+/* 15. an object data:
+const car = {
+    brand: "Toyota",
+    year: 2022,
+    features: ["GPS","Bluetooth", "Backup Camera"]
+}
+What is the result of
+car.features[2]?
+
+Answer : "Backup Camera"
+
+Note: Getting key object with (dot) and data in array with [the data index]
+*/
+
+/* 16. an object data:
+const person = {
+    name: "John",
+    ager: 30,
+    address: {
+        city: "London",
+        Country: "United Kingdom"
+    }
+};
+How to access "London"?
+
+Answer : person.address.city; or person.address['city']
+
+Note: Getting key object with (dot) and data in array with [the data index]. We also can use [] with deleting the dot before it
+*/
+
+/* 18. an object data:
+const student = {
+    name: "Bob",
+    ager: 20,
+    grades: [85,92,78,95]
+};
+How to access 78 from grades prop?
+
+Answer : student.grades[2];
+
+Note: Getting key object with (dot) and data in array with [the data index]. We also can use [] with deleting the dot before it
+*/
+
+/* 19. an object data:
+const person = {
+    name: "Carol",
+    ager: 35,
+    "tempat tinggal": {
+        city: "Los Angeles",
+        state: "California"
+    }
+};
+How to get "California"?
+
+Answer : person['tempat tinggal'].state;
+
+console.log(person["tempat tinggal"].state);
+
+Note: Getting key object with (dot) and data in array with [the data index]. We also can use [] with deleting the dot before it
+*/
+
+/* 20. How to get year data from date?
+
+Answer : date.getFullYear();
+
+console.log(new Date().getFullYear());
+or you can declare a variable "date" first with new Date() value
+
+Note: Remember, It is getFullYear , not getYear. And It is a function so don't forget to add ()
+*/
+
+
+// You have cleared the JS Part 3-4. Now you can continue to JS part 5. Good luck!!
