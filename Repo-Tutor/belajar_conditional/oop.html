@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP DOM Example with Multiple Objects</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="button1">Button 1</button>
+      <p id="display1">Count: 0</p>
+
+      <button id="button2">Button 2</button>
+      <p id="display2">Count: 0</p>
+    </div>
+
+    <script>
+      class Counter {
+        constructor(buttonId, displayId) {
+          this.count = 0;
+          this.button = document.getElementById(buttonId);
+          this.display = document.getElementById(displayId);
+          this.button.addEventListener("click", () => this.increment());
+          this.updateDisplay();
+        }
+
+        increment() {
+          this.count++;
+          this.updateDisplay();
+        }
+
+        updateDisplay() {
+          this.display.textContent = `Count: ${this.count}`;
+        }
+      }
+
+      const counter1 = new Counter("button1", "display1");
+      const counter2 = new Counter("button2", "display2");
+    </script>
+  </body>
+</html>
