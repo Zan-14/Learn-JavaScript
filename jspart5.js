@@ -151,8 +151,8 @@ const scoreGrade = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].toString();
 for (let i = 0; i < 5; i++) {
     loopFor.innerHTML += `<p>${i + 1} - ${scoreGrade}</p><br>`;
 };
-
 // console.log(scoreGrade);
+
 
 /* 2. Uncounted looping = We don't know how many times are the loop
 examples: while and do/while */
