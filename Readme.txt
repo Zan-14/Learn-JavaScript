@@ -15,3 +15,10 @@ READ THIS.
 
 * Progress from WPU JavaScript Playlist
 * Dasar Pemrograman dengan JavaScript
+
+Compiler language = C, C++, Objective-C
+Intepreter language = PHP
+Hybrid language = Java, Python
+- JavaScript = Intepreter Language, untyped, 
+
+* If you want to add script JS at the head tag, you should add defer attribute. This attribute will run the JS after the HTML even though the script is at the head tag.
