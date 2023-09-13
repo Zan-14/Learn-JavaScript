@@ -149,13 +149,13 @@ const loopFor = document.getElementById('loop_for');
 const scoreGrade = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].toString();
 
 for (let i = 0; i < 5; i++) {
-    loopFor.innerHTML += `<p>${i + 1} - ${scoreGrade}</p><br>`;
+    loopFor.innerHTML += `<p>${i + 1} - ${scoreGrade}</p>`;
 };
 // console.log(scoreGrade);
 
 
 /* 2. Uncounted looping = We don't know how many times are the loop
-examples: while and do/while */
+examples: while and do...while */
 
 /* while 
 rules to avoid infinite loop:
@@ -167,10 +167,24 @@ while(termination condition) {
 
 example (assignment from Video number 18 from playlist "Dasar Pemrograman dengan Javascript WPU"):
 */
-let myAngkot = 1; // starting value
-while (myAngkot <= 10) {
-    console.log(`Angkot No. ${myAngkot} beroperasi dengan baik.`); //action
-    myAngkot++; // increment
-} // this will avoid infinite looping
 
+let totalAngkot = 5;
+let workAngkot = 2;
+let noAngkot = 1; // starting value
+while (noAngkot <= workAngkot) {
+    let showAngkot = document.querySelector('.loop_while');
+    showAngkot.innerHTML += `<p>Angkot No. ${noAngkot} beroperasi dengan baik.</p>`; //action
+    noAngkot++; // increment
+}  // this will avoid infinite looping
+
+for (let i = noAngkot; i <= totalAngkot; i++) {
+    let showAngkot = document.querySelector('.loop_while');
+    showAngkot.innerHTML += `<p>Angkot No. ${i} sedang tidak beroperasi.</p>`; //action
+}
+
+
+/* Example above is actually more correct if we use for loop instead of while loop because we know exactly when the loop ends.
+
+We use while loop when the end of looping is based on the condition, not number. Example: when the user clicks a button, the loop ends.
+*/
 
