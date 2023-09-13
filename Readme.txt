@@ -11,3 +11,7 @@ READ THIS.
 7. Overwrite the Repo-Tutor in the Learn-JavaScript folder
 8. Commit the change to the js/part5 branch.
 9. You are ready to go
+
+
+* Progress from WPU JavaScript Playlist
+* Dasar Pemrograman dengan JavaScript
