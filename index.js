@@ -2,12 +2,70 @@
 
 // external JavaScript
 // adding script in the <head> and below the body/html will effect the order of appearing. Pay attention to it.
+/*But, you can add defer attribute inside the <script>
+example: <script defer src="main.js"></script>
+This code can be placed in the <head> and still work. Because defer will make the script run after the HTML is rendered.
+*/
 console.log('try console log');
 // before adding more code, check the JS file whether it has been read or not by the browser 
 // by using console.log(); (debug) or alert(); or prompt();
 
-// const vs let vs var
-// DON'T USE VAR
+
+/* Escape character in JavaScript
+
+\' = when you need single quotes
+example: 'today is jum\'at'
+Note: You can use "" to compile the string, but you can also use '' but use \' to add another single quote on certain words.
+
+\" = same with \' but double quotes.
+
+\n = create 1 space between words
+example: "Today is the day of \n celebrations"
+Note: same with <br> in HTML
+
+\t = create 1 tab space between words in string data
+*/
+
+
+/* Truthy and Falsy Values
+
+Check the LEARNING JAVASCRIPT 1.docx
+
+	If you type, for example:
+Boolean(null); the output will be false
+Boolean([10,23]); the output will be true (because it’s an array)
+	Conclusion, The default boolean value of each data in the table is either true or false. This information will be useful in the upcoming JavaScript and React implementation.
+
+
+*/
+
+
+
+/* const vs let vs var
+
+DON'T USE VAR!
+
+const vs let to declare a variable
+*this is related to hoisting concepts in JavaScript
+
+const :
+-Use this to declare a variable that NEVER change in the upcoming code
+-Use this to declare a variable with object/array values. This will make the variable still accessible and can be changed in the future but not the data type. This needs the object/array methods like push/pop, etc.
+-conclusion: const variable is still changeable with methods/ still PARTIALLY changeable.
+
+
+let :
+-Use this to declare a variable that MAYBE change in the upcoming code
+-Most used in for loop
+
+*/
+
+/* JavaScript = Function Scope (if we use var to declare a variable)
+Means that a new variable created inside a function cannot be accessed and manipulate by outside code
+
+To change JavaScript code into block scope, we use let to declare a variable. (This is the new and correct way to declare a variable so that the variable values are not easily accessed and manipulate by outside code)
+*/
+
 
 /* This is the way of making 
 a multiline 
