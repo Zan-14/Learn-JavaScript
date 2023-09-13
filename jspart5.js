@@ -157,3 +157,20 @@ for (let i = 0; i < 5; i++) {
 /* 2. Uncounted looping = We don't know how many times are the loop
 examples: while and do/while */
 
+/* while 
+rules to avoid infinite loop:
+*starting value
+while(termination condition) {
+    *action
+    *increment / decrement
+}
+
+example (assignment from Video number 18 from playlist "Dasar Pemrograman dengan Javascript WPU"):
+*/
+let myAngkot = 1; // starting value
+while (myAngkot <= 10) {
+    console.log(`Angkot No. ${myAngkot} beroperasi dengan baik.`); //action
+    myAngkot++; // increment
+} // this will avoid infinite looping
+
+
